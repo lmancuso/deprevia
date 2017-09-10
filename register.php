@@ -53,9 +53,8 @@
         </div>
 
         <div class="row">
-            <div class="input-field col s6">
-              <label> What is your gender? </label><br>
-              <form action="#">
+              <p style="color: #a7a7a7"> What is your gender? </p>
+              <form action="col s12">
                 <p>
                   <input name="group1" type="radio" id="genero_masculino" value="0" class="with-gap">
                   <label for="genero_masculino">Male</label>
@@ -69,7 +68,6 @@
                   <label for="genero_otros">Other</label>
                 </p>
               </form>
-            </div>
         </div>
 
         <div id="button-confirm" class="row right">
