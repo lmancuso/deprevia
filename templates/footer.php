@@ -1,4 +1,4 @@
-<footer class="page-footer orange">
+<footer class="page-footer red accent-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -29,7 +29,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Hecho por <a class="orange-text text-lighten-3" href="#">Los del fondo DH</a>
       </div>
     </div>
   </footer>
