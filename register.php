@@ -16,8 +16,20 @@
 
     <?php require('templates/header.php'); ?>
 
-<div class="main-form">
-    <div class="row">
+
+<div class="container">
+  <div class="section"></div>
+  <main>
+    <center>
+      <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />
+      <div class="section"></div>
+
+      <h5 class="indigo-text">Registro</h5>
+      <div class="section"></div>
+
+<div class="container">
+<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+    
       <form class="col s12">
         <div class="row">
           <div class="input-field col s6">
@@ -77,7 +89,14 @@
           <a href="index.php" id="download-button" class="col s12 btn btn-large waves-effect indigo">Volver</a>
         </div>
       </form>
-    </div>
+    
+  </div>
+</div>
+    </center>
+
+    <div class="section"></div>
+    <div class="section"></div>
+  </main>
 </div>
 
 <?php require('templates/footer.php'); ?>
