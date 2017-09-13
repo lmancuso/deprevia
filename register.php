@@ -82,10 +82,10 @@
               </form>
         </div>
 
-        <div id="button-confirm" class="row right">
+        <div class="row">
           <a href="index.php" id="download-button" class="col s12 btn btn-large waves-effect indigo">Confirmar</a>
         </div>
-        <div class="row right">
+        <div class="row">
           <a href="index.php" id="download-button" class="col s12 btn btn-large waves-effect indigo">Volver</a>
         </div>
       </form>
