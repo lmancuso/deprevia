@@ -22,21 +22,21 @@
         <div class="row">
           <div class="input-field col s6">
             <input id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
+            <label for="first_name">Nombre</label>
           </div>
           <div class="input-field col s6">
             <input id="last_name" type="text" class="validate">
-            <label for="last_name">Last Name</label>
+            <label for="last_name">Apellido</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
             <input id="password" type="password" class="validate">
-            <label for="password">Password</label>
+            <label for="password">Contraseña</label>
           </div>
           <div class="input-field col s6">
             <input id="password" type="password" class="validate">
-            <label for="password">Confirm your Password</label>
+            <label for="password">Confirmar Contraseña</label>
           </div>
         </div>
         <div class="row">
@@ -48,33 +48,33 @@
         <div class="row">
           <div class="input-field col s12">
             <input id="email" type="email" class="validate">
-            <label for="email">Confirm your Email</label>
+            <label for="email">Confirmar Email</label>
           </div>
         </div>
 
         <div class="row">
-              <p style="color: #a7a7a7"> What is your gender? </p>
+              <p style="color: #a7a7a7"> Cual es tu sexo? </p>
               <form action="col s12">
                 <p>
                   <input name="group1" type="radio" id="genero_masculino" value="0" class="with-gap">
-                  <label for="genero_masculino">Male</label>
+                  <label for="genero_masculino">Hombre</label>
                 </p>
                 <p>
                   <input name="group1" type="radio" id="genero_femenino" value="1" class="with-gap">
-                  <label for="genero_femenino">Female</label>
+                  <label for="genero_femenino">Mujer</label>
                 </p>
                 <p>
                   <input name="group1" type="radio" id="genero_otros" value="2" class="with-gap">
-                  <label for="genero_otros">Other</label>
+                  <label for="genero_otros">Otro</label>
                 </p>
               </form>
         </div>
 
         <div id="button-confirm" class="row right">
-          <a href="index.php" id="download-button" class="btn-large waves-effect waves-light orange">Confirm</a>
+          <a href="index.php" id="download-button" class="col s12 btn btn-large waves-effect indigo">Confirmar</a>
         </div>
         <div class="row right">
-          <a href="index.php" id="download-button" class="btn-large waves-effect waves-light orange">Back</a>
+          <a href="index.php" id="download-button" class="col s12 btn btn-large waves-effect indigo">Volver</a>
         </div>
       </form>
     </div>
