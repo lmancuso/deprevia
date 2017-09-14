@@ -10,10 +10,10 @@
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a class="waves-effect waves-blue darken-4" href="index.php">Home</a></li>
-        <li><a class="waves-effect waves-blue darken-4" href="faqs.php">FAQs</a></li>
-        <li><a class="waves-effect waves-blue darken-4" href="register.php">Registro</a></li>
-        <li><a class="waves-effect waves-blue darken-4" href="login.php">Login</a></li>
+        <li><a class="waves-effect waves-red" href="index.php">Home</a></li>
+        <li><a class="waves-effect waves-red" href="faqs.php">FAQs</a></li>
+        <li><a class="waves-effect waves-red" href="register.php">Registro</a></li>
+        <li><a class="waves-effect waves-red" href="login.php">Login</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
