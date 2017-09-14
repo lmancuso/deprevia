@@ -42,11 +42,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s6">
+          <div class="input-field col s12">
             <input id="password" type="password" class="validate">
             <label for="password">Contraseña</label>
           </div>
-          <div class="input-field col s6">
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
             <input id="password" type="password" class="validate">
             <label for="password">Confirmar Contraseña</label>
           </div>
@@ -65,21 +67,21 @@
         </div>
 
         <div class="row">
-              <p style="color: #a7a7a7"> Cual es tu sexo? </p>
-              <form action="col s12">
-                <p>
+              <p style="color: #9e9e9e"> Cual es tu sexo? </p>
+              <div action="col s12 s6">
+                
                   <input name="group1" type="radio" id="genero_masculino" value="0" class="with-gap">
                   <label for="genero_masculino">Hombre</label>
-                </p>
-                <p>
+                
+                
                   <input name="group1" type="radio" id="genero_femenino" value="1" class="with-gap">
                   <label for="genero_femenino">Mujer</label>
-                </p>
-                <p>
+                
+                
                   <input name="group1" type="radio" id="genero_otros" value="2" class="with-gap">
                   <label for="genero_otros">Otro</label>
-                </p>
-              </form>
+                
+              </div>
         </div>
 
         <div class="row">
