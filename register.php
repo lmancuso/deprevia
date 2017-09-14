@@ -19,8 +19,8 @@
 
 <div class="container">
   <div class="section"></div>
-  <main>
-    <center>
+  <main class="center-align">
+    
       <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />
       <div class="section"></div>
 
@@ -94,7 +94,6 @@
     
   </div>
 </div>
-    </center>
 
     <div class="section"></div>
     <div class="section"></div>

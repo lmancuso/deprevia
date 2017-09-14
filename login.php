@@ -16,8 +16,8 @@
 
 <div class="container">
             <div class="section"></div>
-  <main>
-    <center>
+  <main class="center-align">
+    
       <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />
       <div class="section"></div>
 
@@ -64,16 +64,15 @@
 
             </div>
 
-            <center>
+            
               <div class='row'>
                 <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
               </div>
-            </center>
+            
           </form>
         </div>
       </div>
       <a href="register.php">Crear cuenta</a>
-    </center>
 
     <div class="section"></div>
     <div class="section"></div>
