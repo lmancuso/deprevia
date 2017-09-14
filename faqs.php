@@ -19,15 +19,23 @@
 
       <ul class="collapsible" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-header"><i class="material-icons">¿Qué es DePrevia?</i>First</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita mollitia facilis deserunt placeat nesciunt itaque velit, consequatur consectetur, dolorem aliquid voluptas! Quia excepturi odio pariatur ipsam sapiente ea. Excepturi, deleniti!</span></div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-header"><i class="material-icons">¿Cómo puedo crear un grupo?</i>Second</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita mollitia facilis deserunt placeat nesciunt itaque velit, consequatur consectetur, dolorem aliquid voluptas! Quia excepturi odio pariatur ipsam sapiente ea. Excepturi, deleniti!</span></div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-header"><i class="material-icons">¿Dónde aparece mi grupo?</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita mollitia facilis deserunt placeat nesciunt itaque velit, consequatur consectetur, dolorem aliquid voluptas! Quia excepturi odio pariatur ipsam sapiente ea. Excepturi, deleniti!</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">¿Mi grupo es visible para todos?</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita mollitia facilis deserunt placeat nesciunt itaque velit, consequatur consectetur, dolorem aliquid voluptas! Quia excepturi odio pariatur ipsam sapiente ea. Excepturi, deleniti!</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">¿Cuántos integrantes puede tener un grupo?</i>First</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita mollitia facilis deserunt placeat nesciunt itaque velit, consequatur consectetur, dolorem aliquid voluptas! Quia excepturi odio pariatur ipsam sapiente ea. Excepturi, deleniti!</span></div>
     </li>
   </ul>
