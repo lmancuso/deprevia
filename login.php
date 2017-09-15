@@ -18,7 +18,6 @@
             <div class="section"></div>
   <main class="center-align">
     
-      <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />
       <div class="section"></div>
 
       <h5 class="indigo-text">Inicia sesión con tu cuenta</h5>
