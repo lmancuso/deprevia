@@ -16,7 +16,7 @@
 
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-        <div class="carousel">
+        <div class="carousel carousel-slider center" data-indicators="true">
           <a class="carousel-item" href="#one!"><img src="images/party01.jpg"></a>
           <a class="carousel-item" href="#two!"><img src="images/party02.jpg"></a>
           <a class="carousel-item" href="#three!"><img src="images/party03.jpg"></a>
