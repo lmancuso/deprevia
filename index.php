@@ -25,7 +25,6 @@
         <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
       </div>
       <br><br>
-
     </div>
   </div>
 
