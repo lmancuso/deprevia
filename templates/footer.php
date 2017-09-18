@@ -2,27 +2,27 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="white-text">Lorem ipsum</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla nisi, maximus non libero varius, bibendum placerat magna. Morbi suscipit efficitur urna sagittis luctus. Cras consectetur sit amet ipsum ac dapibus. Nunc bibendum justo non hendrerit varius. Etiam fringilla vel felis non iaculis. In sit amet ornare magna. Nullam vitae ipsum fermentum, semper leo non, posuere quam. Morbi quis gravida leo. Sed bibendum, lectus volutpat tincidunt malesuada, erat massa finibus nisl, quis faucibus justo ex in nisl.</p>
 
 
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!">Lorem ipsum</a></li>
+            <li><a class="white-text" href="#!">Lorem ipsum</a></li>
+            <li><a class="white-text" href="#!">Lorem ipsum</a></li>
+            <li><a class="white-text" href="#!">Lorem ipsum</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!">Lorem ipsum</a></li>
+            <li><a class="white-text" href="#!">Lorem ipsum</a></li>
+            <li><a class="white-text" href="#!">Lorem ipsum</a></li>
+            <li><a class="white-text" href="#!">Lorem ipsum</a></li>
           </ul>
         </div>
       </div>
@@ -42,4 +42,4 @@
   <script type="text/javascript">   $('.carousel.carousel-slider').carousel({
     fullWidth: true
     });
-    </script> 
+    </script>

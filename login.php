@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>DePrevia - Login</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,7 +17,7 @@
 <div class="container">
             <div class="section"></div>
   <main class="center-align">
-    
+
       <div class="section"></div>
 
       <h5 class="indigo-text">Inicia sesión con tu cuenta</h5>
@@ -27,7 +27,7 @@
         <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
           <form class="col s12" method="post">
-            
+
 
             <div class='row'>
               <div class='input-field col s12'>
@@ -41,7 +41,7 @@
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Ingresa tu Password</label>
               </div>
-              
+
               <div class="row">
               <label style='float: center;'>
                 Recordar
@@ -63,11 +63,11 @@
 
             </div>
 
-            
+
               <div class='row'>
                 <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
               </div>
-            
+
           </form>
         </div>
       </div>
