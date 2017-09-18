@@ -65,6 +65,10 @@
   </div>
 
 <?php require('templates/footer.php'); ?>
-
+<script type="text/javascript">
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true
+    });
+</script>
   </body>
 </html>
