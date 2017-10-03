@@ -9,10 +9,46 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <?php require('templates/header.php'); ?>
+  <?php require_once("templates/funciones.php"); ?>
+
 </head>
 <body>
 
-<?php require('templates/header.php'); ?>
+
+<?php
+    if (estaLogueado()) {
+      header("Location:perfil.php");exit;
+    }
+
+    $arrayDeErrores = [];
+
+    if ($_POST) {
+      $arrayDeErrores = validarLogin();
+
+      if (count($arrayDeErrores) == 0) {
+        loguear($_POST["email"]);
+        if (isset($_POST["recordame"])) {
+          recordar($_POST["email"]);
+        }
+
+        header("Location:perfil.php");exit;
+      }
+
+    }
+ ?>
+
+ <div class="row">
+     <?php if (count($arrayDeErrores) > 0) : ?>
+       <ul style="color:red;">
+           <?php foreach($arrayDeErrores as $error) : ?>
+             <li>
+               <?=$error?>
+             </li>
+           <?php endforeach; ?>
+       </ul>
+     <?php endif;?>
 
 <div class="container">
             <div class="section"></div>
@@ -50,7 +86,7 @@
                 <div class="switch">
                   <label>
                     Off
-                    <input type="checkbox">
+                    <input type="checkbox" name="recordame" value="1">
                     <span class="lever"></span>
                     On
                   </label>
