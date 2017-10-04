@@ -19,7 +19,7 @@
 <?php
 $nombre = $_POST['first_name'] ?? null;
 $apellido = $_POST['last_name'] ?? null;
-$username = $_POST['username'] ?? null;
+$usuario = $_POST['username'] ?? null;
 $email = $_POST['email'] ?? null;
 $emailConfirm = $_POST['emailConfirm'] ?? null;
 $contrasena = $_POST['password'] ?? null;
@@ -46,7 +46,7 @@ if($_POST)
 
       move_uploaded_file($archivo, $nombre);
 
-      header("Location:felicidad.php");exit;
+      header("Location:perfil.php");exit;
     }
 }
 

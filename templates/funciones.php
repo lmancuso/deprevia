@@ -5,7 +5,7 @@ if(!estaLogueado() && isset($_COOKIE['usuarioLogueado'])){
   loguear($_COOKIE['usuarioLogueado']);
 }
 
-function validarLoguin(){
+function validarLogin(){
   $arrayDeErrores = [];
 
   if($_POST['email'] == ""){
@@ -24,7 +24,7 @@ function validarLoguin(){
       else{
         $usuario = traerPorEmail($_POST['email']);
 
-          if(password_verify($_POST['password'],$usuario['contrasenia']) == false){
+          if(password_verify($_POST['password'],$usuario['password']) == false){
             $arrayDeErrores[] = 'Las contraseñas no coinciden';
             }
           }
@@ -80,6 +80,7 @@ function armarUsuario($datos){
   return [
   "first_name" => $datos["first_name"],
   "last_name" => $datos["last_name"],
+  "username" => $datos["username"],
   "password" => $datos["password"],
   "email" => $datos["email"],
   "password" => password_hash($datos["password"], PASSWORD_DEFAULT),
