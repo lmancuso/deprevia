@@ -125,7 +125,7 @@ if($_POST)
         <p class="" style="color: #9e9e9e"> Fecha de nacimiento</p>
         <div class="row">
           <div class="input-field col s4">
-            <select name="fnac_dia">
+            <select name="fnac_dia" size="5">
               <option value="" disabled selected>dia</option>
               <?php for ($i = 1; $i <= 31; $i++) { ?>
                   <option
@@ -136,7 +136,7 @@ if($_POST)
             </select>
           </div>
           <div class="input-field col s4">
-            <select name="fnac_mes">
+            <select name="fnac_mes" size="5">
               <option value="" disabled selected>mes</option>
               <?php foreach ($meses as $numero => $nombre) { ?>
                   <option
@@ -147,7 +147,7 @@ if($_POST)
             </select>
           </div>
           <div class="input-field col s4">
-            <select name="fnac_anio">
+            <select name="fnac_anio" size="5">
               <option value="" disabled selected style="color: #9e9e9e">año</option>
               <?php for ($i = date('Y'); $i >= (date('Y') - 100); $i--) { ?>
                   <option
