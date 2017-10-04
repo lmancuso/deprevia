@@ -17,6 +17,22 @@
   <body>
 
 <?php
+$meses = [
+    1 => "Enero", 2 => "Febrero", 3 => "Marzo", 4 => "Abril", 5 => "Mayo", 6 => "Junio",
+    7 => "Julio", 8 => "Agosto", 9 => "Septiembre", 10 => "Octubre", 11 => "Noviembre", 12 => "Diciembre"
+];
+
+$categorias = [
+    ['id' => 1, 'nombre' => 'Historia'],
+    ['id' => 2, 'nombre' => 'Geografía'],
+    ['id' => 3, 'nombre' => 'Deportes'],
+    ['id' => 4, 'nombre' => 'Arte'],
+    ['id' => 5, 'nombre' => 'Ciencia'],
+    ['id' => 6, 'nombre' => 'Espectaculos'],
+];
+
+
+
 $nombre = $_POST['first_name'] ?? null;
 $apellido = $_POST['last_name'] ?? null;
 $usuario = $_POST['username'] ?? null;
@@ -24,6 +40,9 @@ $email = $_POST['email'] ?? null;
 $emailConfirm = $_POST['emailConfirm'] ?? null;
 $contrasena = $_POST['password'] ?? null;
 $contrasenaConfirm = $_POST['passwordConfirm'] ?? null;
+$dia = $_POST['fnac_dia'] ?? null;
+$mes = $_POST['fnac_mes'] ?? null;
+$anio = $_POST['fnac_anio'] ?? null;
 $genero = $_POST['genero'] ?? null;
 
 $arrayDeErrores = [];
@@ -103,6 +122,45 @@ if($_POST)
             <input id="passwordConfirm" type="password" class="validate" name="passwordConfirm">
           </div>
         </div>
+        <p class="" style="color: #9e9e9e"> Fecha de nacimiento</p>
+        <div class="row">
+          <div class="input-field col s4">
+            <select name="fnac_dia">
+              <option value="" disabled selected>dia</option>
+              <?php for ($i = 1; $i <= 31; $i++) { ?>
+                  <option
+                      value="<?php echo $i; ?>"
+                      <?php echo ($i == $dia) ? 'selected="selected"' : ''; ?>
+                  ><?php echo $i; ?></option>
+              <?php } ?>
+            </select>
+          </div>
+          <div class="input-field col s4">
+            <select name="fnac_mes">
+              <option value="" disabled selected>mes</option>
+              <?php foreach ($meses as $numero => $nombre) { ?>
+                  <option
+                      value="<?php echo $numero; ?>"
+                      <?php echo ($numero == $mes) ? 'selected="selected"' : ''; ?>
+                  ><?php echo $nombre; ?></option>
+              <?php } ?>
+            </select>
+          </div>
+          <div class="input-field col s4">
+            <select name="fnac_anio">
+              <option value="" disabled selected style="text-align: center ">año</option>
+              <?php for ($i = date('Y'); $i >= (date('Y') - 100); $i--) { ?>
+                  <option
+                      value="<?php echo $i; ?>"
+                      <?php echo ($i == $anio) ? 'selected="selected"' : ''; ?>
+                  ><?php echo $i; ?></option>
+              <?php } ?>
+            </select>
+
+          </div>
+        </div>
+
+
         <div class="row">
           <div class="input-field col s12">
             <label for="email">Email</label>
@@ -114,8 +172,8 @@ if($_POST)
             <label for="email">Confirmar Email</label>
             <input id="emailConfirm" type="email" class="validate" name="emailConfirm">
           </div>
-        </div>
-        <div class="file-field input-field">
+
+        <div class="file-field input-field col s12">
           <div class="btn-large waves-effect indigo">
             <span>IMG</span>
             <input type="file" name="avatar" class="" >
@@ -124,10 +182,9 @@ if($_POST)
             <input class="file-path validate" type="text">
           </div>
         </div>
-
+        <p  class="col s12" style="color: #9e9e9e"> Cual es tu sexo? </p>
         <div class="row">
-              <p style="color: #9e9e9e"> Cual es tu sexo? </p>
-              <div action="col s12 s6">
+                  <div action="col s12">
 
                   <input name="genero" type="radio" id="genero_masculino" value="0" class="with-gap">
                   <label for="genero_masculino">Hombre</label>
@@ -143,10 +200,10 @@ if($_POST)
               </div>
         </div>
 
-        <div class="row">
+        <div class="row col s12">
           <input type="submit" name="btn_submit" class="col s12 btn btn-large waves-effect indigo" value="Registrarme">
         </div>
-        <div class="row">
+        <div class="row col s12">
           <a href="index.php" id="download-button" class="col s12 btn btn-large waves-effect indigo">Volver</a>
         </div>
       </form>
@@ -161,6 +218,11 @@ if($_POST)
 
 <?php require('templates/footer.php'); ?>
 
+<script type="text/javascript">
+$(document).ready(function() {
+  $('select').material_select();
+});
+</script>
 
   </body>
 </html>
