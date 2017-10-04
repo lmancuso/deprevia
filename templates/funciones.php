@@ -155,9 +155,4 @@ function getUsuarioLogueado() {
 function recordar($email) {
   setcookie("usuarioLogueado", $email, time()+3600);
 }
-
-
-
-
-
  ?>

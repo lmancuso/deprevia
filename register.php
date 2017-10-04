@@ -116,9 +116,9 @@ if($_POST)
           </div>
         </div>
         <div class="file-field input-field">
-          <div class="btn">
+          <div class="btn-large waves-effect indigo">
             <span>IMG</span>
-            <input type="file" name="avatar" >
+            <input type="file" name="avatar" class="" >
           </div>
           <div class="file-path-wrapper">
             <input class="file-path validate" type="text">
@@ -144,7 +144,7 @@ if($_POST)
         </div>
 
         <div class="row">
-          <input type="submit" name="btn_submit" class="btn btn-info" value="Registrarme">
+          <input type="submit" name="btn_submit" class="col s12 btn btn-large waves-effect indigo" value="Registrarme">
         </div>
         <div class="row">
           <a href="index.php" id="download-button" class="col s12 btn btn-large waves-effect indigo">Volver</a>

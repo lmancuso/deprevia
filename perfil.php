@@ -27,10 +27,10 @@ $title = 'Mi Perfil';
   $usuario = getUsuarioLogueado();
 
  ?>
-
+<?php  ?>
 <div class="row" style="text-align: center">
   <h5 >Bienvenido <?=$usuario["username"]?></h5>
-  <p><img src="images/party01.jpg" style="width: 50%"></p>
+  <p><img src="images/imagen1.jpg" style="width: 50%"></p>
 </div>
 
 
