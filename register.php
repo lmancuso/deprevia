@@ -61,7 +61,7 @@ if($_POST)
       $nombreDelArchivo = $_FILES["avatar"]["name"];
       $extension = pathinfo($nombreDelArchivo,PATHINFO_EXTENSION);
 
-      $nombre = dirname(__FILE__) . "/img/" . $_POST["username"] . ".$extension";
+      $nombre = dirname(__FILE__) . "/images/" . $_POST["username"] . ".$extension";
 
       move_uploaded_file($archivo, $nombre);
 
@@ -148,7 +148,7 @@ if($_POST)
           </div>
           <div class="input-field col s4">
             <select name="fnac_anio">
-              <option value="" disabled selected style="text-align: center ">año</option>
+              <option value="" disabled selected style="color: #9e9e9e">año</option>
               <?php for ($i = date('Y'); $i >= (date('Y') - 100); $i--) { ?>
                   <option
                       value="<?php echo $i; ?>"
