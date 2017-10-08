@@ -56,6 +56,7 @@ if($_POST)
 
       $usuario = armarUsuario($_POST);
       guardarUsuario($usuario);
+      
 
       $archivo = $_FILES["avatar"]["tmp_name"];
       $nombreDelArchivo = $_FILES["avatar"]["name"];
@@ -99,15 +100,15 @@ if($_POST)
         <div class="row">
           <div class="input-field col s6">
             <label for="first_name">Nombre</label>
-            <input id="first_name" type="text" class="validate" name="first_name">
+            <input id="first_name" type="text" class="validate" name="first_name" value="<?php echo $nombre; ?>">
           </div>
           <div class="input-field col s6">
             <label for="last_name">Apellido</label>
-            <input id="last_name" type="text" class="validate" name="last_name">
+            <input id="last_name" type="text" class="validate" name="last_name" value="<?php echo $apellido; ?>">
           </div>
         <div class="input-field col s12">
           <label for="username">Nombre de usuario</label>
-          <input id="username" type="text" class="validate" name="username">
+          <input id="username" type="text" class="validate" name="username" value="<?php echo $usuario; ?>">
         </div>
         </div>
         <div class="row">
@@ -122,8 +123,20 @@ if($_POST)
             <input id="passwordConfirm" type="password" class="validate" name="passwordConfirm">
           </div>
         </div>
-        <p class="" style="color: #9e9e9e"> Fecha de nacimiento</p>
         <div class="row">
+          <div class="input-field col s12">
+            <label for="email">Email</label>
+            <input id="email" type="email" class="validate" name="email" value="<?php echo $email; ?>">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="email">Confirmar Email</label>
+            <input id="emailConfirm" type="email" class="validate" name="emailConfirm" value="<?php echo $emailConfirm; ?>">
+          </div>
+
+        <p class="col s12" style="color: #9e9e9e"> Fecha de nacimiento</p>
+        <div class="row col s12">
           <div class="input-field col s4">
             <select name="fnac_dia" size="5">
               <option value="" disabled selected>dia</option>
@@ -159,20 +172,6 @@ if($_POST)
 
           </div>
         </div>
-
-
-        <div class="row">
-          <div class="input-field col s12">
-            <label for="email">Email</label>
-            <input id="email" type="email" class="validate" name="email">
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <label for="email">Confirmar Email</label>
-            <input id="emailConfirm" type="email" class="validate" name="emailConfirm">
-          </div>
-
         <div class="file-field input-field col s12">
           <div class="btn-large waves-effect indigo">
             <span>IMG</span>
@@ -198,9 +197,12 @@ if($_POST)
                   <label for="genero_otros">Otro</label>
 
               </div>
+
         </div>
 
         <div class="row col s12">
+          <input type="checkbox" id="chk-terminos" name="terminos" class="with-gap">
+          <label for="chk-terminos">Acepto los términos y condiciones</label>
           <input type="submit" name="btn_submit" class="col s12 btn btn-large waves-effect indigo" value="Registrarme">
         </div>
         <div class="row col s12">

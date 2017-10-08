@@ -12,7 +12,6 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
     <?php require_once("templates/funciones.php"); ?>
-    <?php require('templates/header.php'); ?>
   </head>
   <body>
 
@@ -21,7 +20,11 @@
 $title = 'Mi Perfil';
 
   if (!estaLogueado()) {
-    header("Location:register.php");exit;
+    header("Location:register.php");
+    require('templates/header.php');exit;
+  }
+  else{
+    require('templates/headerLogin.php');
   }
 
   $usuario = getUsuarioLogueado();
@@ -30,7 +33,7 @@ $title = 'Mi Perfil';
 <?php  ?>
 <div class="row" style="text-align: center">
   <h5 >Bienvenido <?=$usuario["username"]?></h5>
-  <p><img src="images/imagen1.jpg" style="width: 50%"></p>
+  <p><img src='images/<?=$usuario["username"]?>.jpg' style="width: 50%"></p>
 </div>
 
 

@@ -59,8 +59,14 @@ function validarInformacion(){
     if($_POST['email'] == ""){
       $arrayDeErrores['email'] = 'El campo del mail esta vacio';
     }
-    elseif (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == false) {
+    else if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == false) {
       $arrayDeErrores["email"] = 'El formato del mail esta mal';
+    }
+    else if (traerPorEmail($_POST["email"]) != NULL) {
+      $arrayDeErrores["email"] = "El mail ya existe";
+    }
+    else if ($_POST['email'] != $_POST['emailConfirm']) {
+      $arrayDeErrores["email"] = "Los correos no coinciden";
     }
 
     if(strlen($_POST['password']) < 8){
@@ -155,4 +161,5 @@ function getUsuarioLogueado() {
 function recordar($email) {
   setcookie("usuarioLogueado", $email, time()+3600);
 }
+
  ?>
