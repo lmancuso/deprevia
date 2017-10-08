@@ -10,7 +10,7 @@
 
 <?php
 logout();
-header("Location:../index.php");exit;
+header("Location:../login.php");exit;
 ?>
 
 

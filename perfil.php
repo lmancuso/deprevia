@@ -12,20 +12,21 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
     <?php require_once("templates/funciones.php"); ?>
+    <?php require_once("register.php"); ?>
+    <?php require('templates/headerLogin.php') ?>
   </head>
   <body>
 
 <?php
 
+
 $title = 'Mi Perfil';
 
   if (!estaLogueado()) {
-    header("Location:register.php");
-    require('templates/header.php');exit;
+    header("Location:register.php");exit;
   }
-  else{
-    require('templates/headerLogin.php');
-  }
+
+
 
   $usuario = getUsuarioLogueado();
 

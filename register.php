@@ -47,8 +47,7 @@ $genero = $_POST['genero'] ?? null;
 
 $arrayDeErrores = [];
 
-if($_POST)
-{
+if($_POST){
 
     $arrayDeErrores = validarInformacion();
 
@@ -56,7 +55,7 @@ if($_POST)
 
       $usuario = armarUsuario($_POST);
       guardarUsuario($usuario);
-      
+
 
       $archivo = $_FILES["avatar"]["tmp_name"];
       $nombreDelArchivo = $_FILES["avatar"]["name"];
@@ -66,7 +65,7 @@ if($_POST)
 
       move_uploaded_file($archivo, $nombre);
 
-      header("Location:perfil.php");exit;
+      header("Location:login.php");exit;
     }
 }
 
