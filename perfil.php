@@ -17,7 +17,7 @@
   <body>
 
 <?php
-
+require_once("soporte.php");
 
 $title = 'Mi Perfil';
 

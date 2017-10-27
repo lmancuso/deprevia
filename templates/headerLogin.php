@@ -1,3 +1,4 @@
+<?php require_once("soporte.php");?>
 <header>
 <div class="navbar-fixed">
   <nav class="red accent-4" role="navigation">

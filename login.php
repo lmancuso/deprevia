@@ -11,26 +11,28 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <?php require('templates/header.php'); ?>
-  <?php require_once("templates/funciones.php"); ?>
+
 
 </head>
 <body>
 
 
 <?php
-    if (estaLogueado()) {
+require_once("soporte.php");
+
+    if ($auth->estaLogueado()) {
       header("Location:perfil.php");exit;
     }
 
     $arrayDeErrores = [];
 
     if ($_POST) {
-      $arrayDeErrores = validarLogin();
+      $arrayDeErrores = $validator->validarLogin($db);
 
       if (count($arrayDeErrores) == 0) {
-        loguear($_POST["email"]);
+        $auth->loguear($_POST["email"]);
         if (isset($_POST["recordame"])) {
-          recordar($_POST["email"]);
+            setcookie("usuarioLogueado", $_POST["email"], time()+60*60*24*30);
         }
 
         header("Location:perfil.php");exit;

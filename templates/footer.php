@@ -1,3 +1,4 @@
+<?php require_once("soporte.php");?>
 <footer class="page-footer red accent-4">
     <div class="container">
       <div class="row">

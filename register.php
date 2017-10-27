@@ -11,50 +11,35 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <?php require_once("templates/funciones.php"); ?>
 
   </head>
   <body>
 
 <?php
+require_once("soporte.php");
+
 $meses = [
     1 => "Enero", 2 => "Febrero", 3 => "Marzo", 4 => "Abril", 5 => "Mayo", 6 => "Junio",
     7 => "Julio", 8 => "Agosto", 9 => "Septiembre", 10 => "Octubre", 11 => "Noviembre", 12 => "Diciembre"
 ];
 
-$categorias = [
-    ['id' => 1, 'nombre' => 'Historia'],
-    ['id' => 2, 'nombre' => 'Geografía'],
-    ['id' => 3, 'nombre' => 'Deportes'],
-    ['id' => 4, 'nombre' => 'Arte'],
-    ['id' => 5, 'nombre' => 'Ciencia'],
-    ['id' => 6, 'nombre' => 'Espectaculos'],
-];
-
-
-
 $nombre = $_POST['first_name'] ?? null;
 $apellido = $_POST['last_name'] ?? null;
 $usuario = $_POST['username'] ?? null;
 $email = $_POST['email'] ?? null;
+$genero = $_POST["genero"] ?? null;
 $emailConfirm = $_POST['emailConfirm'] ?? null;
-$contrasena = $_POST['password'] ?? null;
-$contrasenaConfirm = $_POST['passwordConfirm'] ?? null;
-$dia = $_POST['fnac_dia'] ?? null;
-$mes = $_POST['fnac_mes'] ?? null;
-$anio = $_POST['fnac_anio'] ?? null;
-$genero = $_POST['genero'] ?? null;
+$edad = $_POST['edad'] ?? null;
 
-$arrayDeErrores = [];
 
 if($_POST){
 
-    $arrayDeErrores = validarInformacion();
+    $arrayDeErrores = $validator->validarInformacion($db);
 
     if(count($arrayDeErrores) == 0) {
 
-      $usuario = armarUsuario($_POST);
-      guardarUsuario($usuario);
+      $usuario =new Usuario($_POST['first_name'],$_POST['last_name'],$_POST['username'], $_POST['password'],$_POST['email'], $_POST["genero"],$_POST["edad"]);
+      $db->guardarUsuario($usuario);
 
 
       $archivo = $_FILES["avatar"]["tmp_name"];
@@ -71,17 +56,16 @@ if($_POST){
 
  ?>
 <?php require('templates/header.php'); ?>
-
  <div class="row">
-     <?php if (count($arrayDeErrores) > 0) : ?>
-       <ul style="color:red;">
-           <?php foreach($arrayDeErrores as $error) : ?>
-             <li>
-               <?=$error?>
-             </li>
-           <?php endforeach; ?>
-       </ul>
-     <?php endif;?>
+     <?php if(isset($arrayDeErrores)) : ?>
+         <ul class="errores">
+             <?php foreach($arrayDeErrores as $error) : ?>
+                 <li>
+                     <?echo $error;?>
+                 </li>
+             <?php endforeach;?>
+         </ul>
+     <?php endif; ?>
 
 <div class="container">
   <div class="section"></div>
@@ -131,46 +115,12 @@ if($_POST){
         <div class="row">
           <div class="input-field col s12">
             <label for="email">Confirmar Email</label>
-            <input id="emailConfirm" type="email" class="validate" name="emailConfirm" value="<?php echo $emailConfirm; ?>">
+            <input id="emailConfirm" type="email" class="validate" name="emailConfirm" value="<?php echo $email; ?>">
           </div>
-
-        <p class="col s12" style="color: #9e9e9e"> Fecha de nacimiento</p>
-        <div class="row col s12">
-          <div class="input-field col s4">
-            <select name="fnac_dia" size="5">
-              <option value="" disabled selected>dia</option>
-              <?php for ($i = 1; $i <= 31; $i++) { ?>
-                  <option
-                      value="<?php echo $i; ?>"
-                      <?php echo ($i == $dia) ? 'selected="selected"' : ''; ?>
-                  ><?php echo $i; ?></option>
-              <?php } ?>
-            </select>
-          </div>
-          <div class="input-field col s4">
-            <select name="fnac_mes" size="5">
-              <option value="" disabled selected>mes</option>
-              <?php foreach ($meses as $numero => $nombre) { ?>
-                  <option
-                      value="<?php echo $numero; ?>"
-                      <?php echo ($numero == $mes) ? 'selected="selected"' : ''; ?>
-                  ><?php echo $nombre; ?></option>
-              <?php } ?>
-            </select>
-          </div>
-          <div class="input-field col s4">
-            <select name="fnac_anio" size="5">
-              <option value="" disabled selected style="color: #9e9e9e">año</option>
-              <?php for ($i = date('Y'); $i >= (date('Y') - 100); $i--) { ?>
-                  <option
-                      value="<?php echo $i; ?>"
-                      <?php echo ($i == $anio) ? 'selected="selected"' : ''; ?>
-                  ><?php echo $i; ?></option>
-              <?php } ?>
-            </select>
-
-          </div>
-        </div>
+           <div class="input-field col s12">
+             <label for="edad">Cual es tu edad?</label>
+             <input id="edad" type="text" class="validate" name="edad" value="<?php echo $edad; ?>">
+           </div>
         <div class="file-field input-field col s12">
           <div class="btn-large waves-effect indigo">
             <span>IMG</span>
