@@ -6,7 +6,7 @@ class DBMySQL extends DB {
     private $conn;
 
     public function __construct() {
-        $dsn = "mysql:host=localhost;port=3306; dbname=usuarios";
+        $dsn = "mysql:host=127.0.0.1;port=3306; dbname=usuarios";
         $user = "root";
 
         $this->conn = new PDO($dsn, $user);
@@ -51,9 +51,9 @@ class DBMySQL extends DB {
         $sql = "INSERT into usuarios values(default, :first_name, :last_name, :username, :password, :email, :genero, :edad)";
 
         $query = $this->conn->prepare($sql);
-        $query->bindValue(":nombre",$usuario->getNombre());
-        $query->bindValue("last_name",$usuario->getApellido());
-        $query->bindValue("username",$usuario->getUsername());
+        $query->bindValue(":fist_name",$usuario->getNombre());
+        $query->bindValue(":last_name",$usuario->getApellido());
+        $query->bindValue(":username",$usuario->getUsername());
         $query->bindValue(":password",$usuario->getPassword());
         $query->bindValue(":email",$usuario->getEmail());
         $query->bindValue(":genero",$usuario->getGenero());
