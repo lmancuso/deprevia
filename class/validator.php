@@ -40,8 +40,8 @@ class Validator {
         if($_FILES['avatar']['error'] != UPLOAD_ERR_OK){
             $arrayDeErrores = 'Hubo un problema al subir el archivo';
         }
-        elseif ($extension != "jpg" && $extension != "jpeg" && $extension != "gif" && $extension !=  "png") {
-            $arrayDeErrores["avatar"] = "Necesitamos que el avatar sea una foto";
+        elseif ($extension != "jpg") {
+            $arrayDeErrores["avatar"] = "Necesitamos que el avatar sea una foto.jpg";
         }
 
         if($_POST['first_name'] ==""){

@@ -42,7 +42,7 @@ class DBMySQL extends DB {
             return NULL;
         }
         else {
-            return new Usuario($array["nombre"], $array["apellido"],$array["username"], $array["password"], $array["email"], $array["genero"], $array["edad"], $array["id"]);
+            return new Usuario($array["first_name"], $array["last_name"],$array["username"], $array["password"], $array["email"], $array["genero"], $array["edad"], $array["id"]);
         }
 
 
@@ -51,7 +51,7 @@ class DBMySQL extends DB {
         $sql = "INSERT into usuarios values(default, :first_name, :last_name, :username, :password, :email, :genero, :edad)";
 
         $query = $this->conn->prepare($sql);
-        $query->bindValue(":fist_name",$usuario->getNombre());
+        $query->bindValue(":first_name",$usuario->getNombre());
         $query->bindValue(":last_name",$usuario->getApellido());
         $query->bindValue(":username",$usuario->getUsername());
         $query->bindValue(":password",$usuario->getPassword());
@@ -76,7 +76,7 @@ class DBMySQL extends DB {
         $arrayDeObjs = [];
 
         foreach ($arrayDeArrays as $array) {
-            $arrayDeObjs[] = new Usuario($array["nombre"], $array["apellido"],$array["username"], $array["password"], $array["email"], $array["genero"], $array["edad"], $array["id"]);
+            $arrayDeObjs[] = new Usuario($array["first_name"], $array["last_name"],$array["username"], $array["password"], $array["email"], $array["genero"], $array["edad"], $array["id"]);
         }
 
         return $arrayDeObjs;

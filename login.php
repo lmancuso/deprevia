@@ -12,10 +12,8 @@
 
   <?php require('templates/header.php'); ?>
 
-
 </head>
 <body>
-
 
 <?php
 require_once("soporte.php");

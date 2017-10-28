@@ -3,7 +3,7 @@
 class Auth {
 
     public function __construct() {
-        //session_start();
+        session_start();
 
         if (isset($_COOKIE["usuarioLogueado"]) && !$this->estaLogueado()) {
             $this->loguear($_COOKIE["usuarioLogueado"]);

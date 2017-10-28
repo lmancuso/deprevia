@@ -26,6 +26,8 @@ $meses = [
 $nombre = $_POST['first_name'] ?? null;
 $apellido = $_POST['last_name'] ?? null;
 $usuario = $_POST['username'] ?? null;
+$password = $_POST['password'] ?? null;
+$passwordConfirm = $_POST['passwordConfirm'] ?? null;
 $email = $_POST['email'] ?? null;
 $genero = $_POST["genero"] ?? null;
 $emailConfirm = $_POST['emailConfirm'] ?? null;
@@ -57,11 +59,11 @@ if($_POST){
  ?>
 <?php require('templates/header.php'); ?>
  <div class="row">
-     <?php if(isset($arrayDeErrores)) : ?>
+     <?php if(count($arrayDeErrores) != 0 ) : ?>
          <ul class="errores">
              <?php foreach($arrayDeErrores as $error) : ?>
                  <li>
-                     <?echo $error;?>
+                     <?=$error?>
                  </li>
              <?php endforeach;?>
          </ul>

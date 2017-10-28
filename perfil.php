@@ -11,7 +11,6 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <?php require_once("templates/funciones.php"); ?>
     <?php require('templates/headerLogin.php') ?>
   </head>
   <body>
@@ -21,17 +20,19 @@ require_once("soporte.php");
 
 $title = 'Mi Perfil';
 
-  if (!estaLogueado()) {
+  if (!$auth->estaLogueado()) {
     header("Location:register.php");exit;
   }
 
-  $usuario = getUsuarioLogueado();
+  $usuario = $auth->obtenerUsuarioLogueado($db);
+    $data = $usuario->getUsername();
 
  ?>
-<?php  ?>
+
 <div class="row" style="text-align: center">
-  <h5 >Bienvenido <?=$usuario["username"]?></h5>
-  <p><img src='images/<?=$usuario["username"]?>.jpg' style="width: 50%"></p>
+
+  <h5>Bienvenido <?=$data?></h5>
+  <p><img src='images/<?=$data?>.png' style="width: 50%"></p>
 </div>
 
 
