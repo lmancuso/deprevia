@@ -57,7 +57,7 @@ if($_POST){
 }
 
  ?>
-<?php require('templates/header.php'); ?>
+<?php require('templates/header.php');?>
  <div class="row">
      <?php if(count($arrayDeErrores) != 0 ) : ?>
          <ul class="errores">

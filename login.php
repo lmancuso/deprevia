@@ -67,7 +67,7 @@ require_once("soporte.php");
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' />
+                <input class='validate' type='email' name='email' id='email' value="<?php echo $email; ?>"/>
                 <label for='email'>Ingresa tu Email</label>
               </div>
             </div>
